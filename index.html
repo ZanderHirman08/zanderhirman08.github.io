@@ -137,26 +137,29 @@
       </div>
 
       <div class="project-card">
-        <div class="thumb">Spatial statistics &amp; machine learning</div>
+        <div class="thumb">Spatial embeddings &amp; machine learning</div>
         <div class="body">
-          <h3>Income, Space, and Immigration</h3>
+          <h3>Predicting Wildfire Risk in Colorado</h3>
           <div class="tags">
-            <span class="tag">R</span>
-            <span class="tag">Census ACS Data</span>
-            <span class="tag">Random Forest</span>
+            <span class="tag">Google Earth Engine</span>
+            <span class="tag">AlphaEarth Embeddings</span>
+            <span class="tag">XGBoost</span>
           </div>
           <p class="desc">
-            A spatial data analysis project exploring how median household income relates to
-            the distribution of foreign-born populations across U.S. states and counties, using
-            American Community Survey and DHS data. Combined regression, spatial
-            autocorrelation (Moran's I), and a random forest model; extended to a
-            county-level case study in Colorado.
+            A wildfire ignition risk model built with a project partner (Kai Skowlund) for a
+            graduate-level Machine Learning course, covering Colorado, New Mexico, Wyoming, and
+            Utah. Combined 64-dimensional AlphaEarth satellite embeddings with environmental
+            covariates (NDVI, climate, terrain, fuel, land cover) drawn from Sentinel-2, ERA5,
+            USGS SRTM, LANDFIRE, NLCD, and VIIRS. Trained and compared five models (Logistic
+            Regression, Random Forest, XGBoost, LightGBM, Neural Network); XGBoost with
+            embeddings and environmental covariates performed best after threshold tuning,
+            reaching 0.86 AUC and 0.83 recall &mdash; prioritizing recall to minimize missed fire risk.
           </p>
           <div class="figure-strip">
-            <img src="assets/images/acs-project/map_immigrant_percent.png" alt="Map of percent foreign-born population by state" />
-            <img src="assets/images/acs-project/map_median_income.png" alt="Map of median household income by state" />
-            <img src="assets/images/acs-project/scatter_income_vs_immigrant_percent.png" alt="Scatter plot of income vs percent foreign-born" />
-            <img src="assets/images/acs-project/map_us_counties_foreign_born_percent.png" alt="Map of foreign-born percent by U.S. county" />
+            <img src="assets/images/wildfire-project/roc_comparison.png" alt="ROC curve comparison across Logistic Regression, Random Forest, XGBoost, and LightGBM" />
+            <img src="assets/images/wildfire-project/xgb_roc.png" alt="XGBoost ROC curve with environmental covariates and embeddings" />
+            <img src="assets/images/wildfire-project/xgb_confusion.png" alt="XGBoost confusion matrix at best threshold" />
+            <img src="assets/images/wildfire-project/xgb_feature_importance.png" alt="XGBoost top 15 feature importance" />
           </div>
         </div>
       </div>
