@@ -102,6 +102,14 @@ a { color: var(--accent); }
 .hero .subtitle { max-width: 620px; margin: 0 auto 1.8rem; color: var(--muted); font-size: 1.08rem; }
 .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
+#hero-map {
+  height: 280px;
+  margin-top: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
 .btn {
   display: inline-block;
   background: var(--accent);
@@ -160,6 +168,15 @@ a { color: var(--accent); }
   margin: 0 6px 6px 0;
 }
 .project-card .desc { color: var(--muted); font-size: .95rem; flex: 1; }
+.project-card .impact {
+  font-size: .88rem;
+  background: var(--accent-light);
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin: 0 0 10px;
+}
+.project-card .impact strong { color: var(--accent); }
+.mini-map { padding: 0; }
 .project-card .links { margin-top: 12px; display: flex; gap: 16px; flex-wrap: wrap; }
 .project-card .links a { font-size: .92rem; font-weight: 600; text-decoration: none; }
 .project-card .links a:hover { text-decoration: underline; }
@@ -240,6 +257,8 @@ a { color: var(--accent); }
 .resume-box .note { color: var(--muted); font-size: .9rem; margin: 6px 0 0; }
 
 /* Contact */
+.location { color: var(--muted); font-size: .92rem; margin-bottom: 18px; }
+
 .contact-list {
   display: flex;
   gap: 20px;

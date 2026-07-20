@@ -5,7 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Zander Hirman — GIS &amp; Geospatial Analysis</title>
 <meta name="description" content="Portfolio of Zander Hirman — GIS, remote sensing, and web mapping projects." />
+<meta property="og:title" content="Zander Hirman — GIS &amp; Geospatial Analysis" />
+<meta property="og:description" content="GIS, remote sensing, and web mapping projects — field data collection, spatial machine learning, and interactive maps." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://zanderhirman08.github.io/" />
+<meta property="og:image" content="https://zanderhirman08.github.io/assets/images/og-preview.png" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
 
@@ -37,6 +44,7 @@
       <a class="btn btn-outline" href="resume/resume.pdf" download>Download Resume</a>
       <a class="btn btn-outline" href="#contact">Contact</a>
     </div>
+    <div id="hero-map" aria-label="Map of project locations"></div>
   </div>
 </section>
 
@@ -69,7 +77,7 @@
     <div class="project-grid">
 
       <div class="project-card featured">
-        <div class="thumb">Interactive map &amp; water-budget calculator</div>
+        <div class="thumb"><img src="assets/images/chipanga-thumb.jpg" alt="Chipanga project interactive map with custom icons and layer legend" /></div>
         <div class="body">
           <span class="featured-badge">Case Study</span>
           <h3>Chipanga Water &amp; Garden Project</h3>
@@ -86,6 +94,7 @@
             interactive map and water-usage calculator to communicate findings to investors
             and stakeholders.
           </p>
+          <p class="impact"><strong>Impact:</strong> presented to investors and community stakeholders to support funding and planning decisions for the water and garden infrastructure.</p>
           <div class="links">
             <a href="https://zanderhirman08.github.io/Chipanga-Water-Charlie-PC/" target="_blank" rel="noopener">Live Site &#8599;</a>
             <a href="https://github.com/ZanderHirman08/Chipanga-Water-Charlie-PC" target="_blank" rel="noopener">Source</a>
@@ -94,7 +103,7 @@
       </div>
 
       <div class="project-card">
-        <div class="thumb">Mapbox GL narrative storymap</div>
+        <div class="thumb"><img src="assets/images/border-storymap-thumb.jpg" alt="Migration Route Mapping storymap title screen" /></div>
         <div class="body">
           <h3>Migration Route Mapping</h3>
           <div class="tags">
@@ -108,6 +117,7 @@
             layers on border infrastructure, checkpoints, and terrain — built to pair a real
             narrative (drawn from the memoir <em>Solito</em>) with spatial context.
           </p>
+          <p class="impact"><strong>Impact:</strong> completed as a Political Ecology of Latin America capstone case study, integrating six GIS data layers with a first-person migration narrative.</p>
           <div class="links">
             <a href="https://zanderhirman08.github.io/border-storymap/" target="_blank" rel="noopener">Live Site &#8599;</a>
             <a href="https://github.com/ZanderHirman08/border-storymap" target="_blank" rel="noopener">Source</a>
@@ -130,6 +140,7 @@
             interactive ArcGIS Online web map, integrated into a public-facing StoryMap
             documenting CoNPS's history, mission, and seed-collection regions.
           </p>
+          <p class="impact"><strong>Impact:</strong> supported CoNPS's statewide native seed conservation effort with a public-facing map of collection regions.</p>
           <div class="links">
             <a href="https://storymaps.arcgis.com/stories/62ef5034f6354fd686edf1f41c1125cd" target="_blank" rel="noopener">View StoryMap &#8599;</a>
           </div>
@@ -137,7 +148,7 @@
       </div>
 
       <div class="project-card">
-        <div class="thumb">Spatial embeddings &amp; machine learning</div>
+        <div id="wildfire-map" class="thumb mini-map" aria-label="Map of predicted wildfire risk across Colorado"></div>
         <div class="body">
           <h3>Predicting Wildfire Risk in Colorado</h3>
           <div class="tags">
@@ -155,11 +166,15 @@
             embeddings and environmental covariates performed best after threshold tuning,
             reaching 0.86 AUC and 0.83 recall &mdash; prioritizing recall to minimize missed fire risk.
           </p>
+          <p class="impact"><strong>Impact:</strong> produced a Colorado-wide risk surface (map above, ~14,000 grid points) that could support wildland-urban interface preparedness and resource planning.</p>
           <div class="figure-strip">
             <img src="assets/images/wildfire-project/roc_comparison.png" alt="ROC curve comparison across Logistic Regression, Random Forest, XGBoost, and LightGBM" />
             <img src="assets/images/wildfire-project/xgb_roc.png" alt="XGBoost ROC curve with environmental covariates and embeddings" />
             <img src="assets/images/wildfire-project/xgb_confusion.png" alt="XGBoost confusion matrix at best threshold" />
             <img src="assets/images/wildfire-project/xgb_feature_importance.png" alt="XGBoost top 15 feature importance" />
+          </div>
+          <div class="links">
+            <a href="assets/docs/wildfire-risk-writeup.docx" target="_blank" rel="noopener">Read the Write-up</a>
           </div>
         </div>
       </div>
@@ -197,6 +212,12 @@
           <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Leaflet</li><li>Mapbox GL JS</li>
         </ul>
       </div>
+      <div class="skill-card">
+        <h3>Certifications</h3>
+        <ul class="skill-list">
+          <li>Esri ArcGIS Technical Associate &mdash; In Progress</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -219,6 +240,7 @@
   <div class="wrap">
     <h2>Contact</h2>
     <p class="section-lead">Open to GIS, remote sensing, and geospatial data roles.</p>
+    <p class="location">Based in Boulder, CO &mdash; open to relocation</p>
     <div class="contact-list">
       <a href="mailto:zhirm08@outlook.com">Email</a>
       <a href="https://www.linkedin.com/in/zander-hirman-918364390/" target="_blank" rel="noopener">LinkedIn</a>
@@ -233,6 +255,8 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/maps.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
