@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zander Hirman — GIS &amp; Geospatial Analysis</title>
+<meta name="description" content="Portfolio of Zander Hirman — GIS, remote sensing, and web mapping projects." />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">Zander Hirman</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <nav id="siteNav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">GIS &amp; Geospatial Analysis</div>
+    <h1>Mapping problems, not just places.</h1>
+    <p class="subtitle">
+      I'm a Geography student at CU Boulder focused on GIS, remote sensing, and web
+      mapping — turning field data and satellite imagery into maps and tools people
+      actually use, from community infrastructure planning to spatial machine learning.
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="#projects">View Projects</a>
+      <a class="btn btn-outline" href="resume/resume.pdf" download>Download Resume</a>
+      <a class="btn btn-outline" href="#contact">Contact</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="section-lead">Background and focus areas.</p>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>Education</h3>
+        <p>Bachelor of Arts in Geography, University of Colorado Boulder (expected May 2026).
+        Coursework spans machine learning &amp; spatial data, statistics &amp; geographic data,
+        environment-society geography, and interdisciplinary data science.</p>
+      </div>
+      <div class="about-card">
+        <h3>What I work on</h3>
+        <p>Field GIS data collection (QGIS/QField), remote sensing and spatial machine learning
+        (Google Earth Engine, Python), interactive web maps (Leaflet, Mapbox GL, ArcGIS Online),
+        and communicating spatial findings to non-technical stakeholders — funders, community
+        partners, and the public.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="section-lead">A mix of field-collected GIS work, web mapping, and spatial data analysis.</p>
+    <div class="project-grid">
+
+      <div class="project-card featured">
+        <div class="thumb">Interactive map &amp; water-budget calculator</div>
+        <div class="body">
+          <span class="featured-badge">Case Study</span>
+          <h3>Chipanga Water &amp; Garden Project</h3>
+          <div class="tags">
+            <span class="tag">QGIS / QField</span>
+            <span class="tag">Leaflet</span>
+            <span class="tag">Field Data Collection</span>
+          </div>
+          <p class="desc">
+            A self-directed field mapping project supporting a community water and garden
+            infrastructure initiative in Chipanga Village, Tanzania. Collected and geolocated
+            100+ water and infrastructure features across a 7-layer dataset (water towers,
+            pipelines, solar arrays, fencing, garden plots, school buildings), then built an
+            interactive map and water-usage calculator to communicate findings to investors
+            and stakeholders.
+          </p>
+          <div class="links">
+            <a href="https://zanderhirman08.github.io/Chipanga-Water-Charlie-PC/" target="_blank" rel="noopener">Live Site &#8599;</a>
+            <a href="https://github.com/ZanderHirman08/Chipanga-Water-Charlie-PC" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="thumb">Mapbox GL narrative storymap</div>
+        <div class="body">
+          <h3>Migration Route Mapping</h3>
+          <div class="tags">
+            <span class="tag">Mapbox GL JS</span>
+            <span class="tag">Narrative Mapping</span>
+            <span class="tag">Political Ecology</span>
+          </div>
+          <p class="desc">
+            An interactive storymap for a Political Ecology of Latin America course project,
+            tracing a migration route from Mexico to the United States alongside geographic
+            layers on border infrastructure, checkpoints, and terrain — built to pair a real
+            narrative (drawn from the memoir <em>Solito</em>) with spatial context.
+          </p>
+          <div class="links">
+            <a href="https://zanderhirman08.github.io/border-storymap/" target="_blank" rel="noopener">Live Site &#8599;</a>
+            <a href="https://github.com/ZanderHirman08/border-storymap" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="thumb"><img src="assets/images/conps/storymap-header.png" alt="CoNPS National Seed Strategy StoryMap header" /></div>
+        <div class="body">
+          <h3>CoNPS Native Seed Collection StoryMap</h3>
+          <div class="tags">
+            <span class="tag">ArcGIS Online</span>
+            <span class="tag">StoryMaps</span>
+            <span class="tag">Field Research</span>
+          </div>
+          <p class="desc">
+            Built during a field research internship with the Colorado Native Plant Society —
+            140+ field hours collecting native seeds statewide. Built and published an
+            interactive ArcGIS Online web map, integrated into a public-facing StoryMap
+            documenting CoNPS's history, mission, and seed-collection regions.
+          </p>
+          <div class="links">
+            <a href="https://storymaps.arcgis.com/stories/62ef5034f6354fd686edf1f41c1125cd" target="_blank" rel="noopener">View StoryMap &#8599;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="thumb">Spatial statistics &amp; machine learning</div>
+        <div class="body">
+          <h3>Income, Space, and Immigration</h3>
+          <div class="tags">
+            <span class="tag">R</span>
+            <span class="tag">Census ACS Data</span>
+            <span class="tag">Random Forest</span>
+          </div>
+          <p class="desc">
+            A spatial data analysis project exploring how median household income relates to
+            the distribution of foreign-born populations across U.S. states and counties, using
+            American Community Survey and DHS data. Combined regression, spatial
+            autocorrelation (Moran's I), and a random forest model; extended to a
+            county-level case study in Colorado.
+          </p>
+          <div class="figure-strip">
+            <img src="assets/images/acs-project/map_immigrant_percent.png" alt="Map of percent foreign-born population by state" />
+            <img src="assets/images/acs-project/map_median_income.png" alt="Map of median household income by state" />
+            <img src="assets/images/acs-project/scatter_income_vs_immigrant_percent.png" alt="Scatter plot of income vs percent foreign-born" />
+            <img src="assets/images/acs-project/map_us_counties_foreign_born_percent.png" alt="Map of foreign-born percent by U.S. county" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="section-lead">Tools and methods I use across fieldwork, analysis, and web mapping.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>GIS &amp; Mapping</h3>
+        <ul class="skill-list">
+          <li>QGIS</li><li>QField</li><li>ArcGIS Pro</li><li>ArcGIS Online</li><li>StoryMaps</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Remote Sensing</h3>
+        <ul class="skill-list">
+          <li>Google Earth Engine</li><li>AlphaEarth embeddings</li><li>Sentinel / Landsat imagery</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Programming &amp; Data</h3>
+        <ul class="skill-list">
+          <li>Python</li><li>R</li><li>SQL</li><li>scikit-learn</li><li>XGBoost</li><li>LightGBM</li><li>Git / GitHub</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Web Mapping</h3>
+        <ul class="skill-list">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Leaflet</li><li>Mapbox GL JS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="resume">
+  <div class="wrap">
+    <h2>Resume</h2>
+    <p class="section-lead">Full experience, education, and skills.</p>
+    <div class="resume-box">
+      <div>
+        <h3>Zander Hirman — Resume</h3>
+        <p class="note">PDF, updated regularly.</p>
+      </div>
+      <a class="btn" href="resume/resume.pdf" download>Download PDF</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="section-lead">Open to GIS, remote sensing, and geospatial data roles.</p>
+    <div class="contact-list">
+      <a href="mailto:zhirm08@outlook.com">Email</a>
+      <a href="https://www.linkedin.com/in/zander-hirman-918364390/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/ZanderHirman08" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    &copy; 2026 Zander Hirman
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
