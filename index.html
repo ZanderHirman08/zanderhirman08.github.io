@@ -260,14 +260,24 @@
           </div>
           <p class="desc">
             Final project for Statistics and Geographic Data at CU Boulder, examining how
-            income relates to the distribution of immigrant populations across U.S. states.
-            Found a Pearson correlation of r = 0.648 between median income and percent
-            foreign-born, and a multiple regression model explaining 76.8% of the variation
-            (R&sup2; = 0.768). Moran's I tests confirmed significant spatial autocorrelation
-            in the data. Extended the analysis with a random forest model (R&sup2; = 0.986
-            prediction accuracy), a DHS immigration-flow comparison, and a county-level
+            median household income relates to the distribution of foreign-born populations
+            across U.S. states using 2020&ndash;2024 American Community Survey data. Found a
+            Pearson correlation of r = 0.648 between income and percent foreign-born, and a
+            multiple regression model, adding unemployment, labor force participation,
+            population density, and border-state status, explaining 76.8% of the variation.
+            Moran's I tests confirmed significant spatial clustering in both variables.
+            Extended the analysis with a random forest model reaching 0.986 prediction R&sup2;,
+            a comparison against DHS lawful permanent resident flow data, and a county-level
             case study in Colorado.
           </p>
+          <div class="figure-strip">
+            <img src="assets/images/income-project/map_immigrant_percent.png" alt="Map of percent foreign-born population by state" />
+            <img src="assets/images/income-project/scatter_income_immigrant.png" alt="Scatter plot of median household income versus percent foreign-born" />
+            <img src="assets/images/income-project/rf_actual_vs_predicted.png" alt="Random forest actual versus predicted percent foreign-born" />
+          </div>
+          <div class="links">
+            <a href="assets/docs/income-immigration-writeup.pdf" target="_blank" rel="noopener">Read the Write-up</a>
+          </div>
         </div>
       </div>
 
@@ -290,6 +300,13 @@
             were compared against prior USGS and Wright Water Engineers studies of the
             same watershed.
           </p>
+          <div class="figure-strip">
+            <img src="assets/images/boulder-creek/nitrate_boxplot.png" alt="Boxplot of nitrate concentration by urbanization level" />
+            <img src="assets/images/boulder-creek/nitrate_effect_size.png" alt="Effect size plot showing estimated increase in nitrate from urbanization" />
+          </div>
+          <div class="links">
+            <a href="assets/docs/boulder-creek-poster.pdf" target="_blank" rel="noopener">Read the Write-up</a>
+          </div>
         </div>
       </div>
 
