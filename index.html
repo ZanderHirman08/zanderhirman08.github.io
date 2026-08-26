@@ -51,7 +51,7 @@
         </p>
         <div class="hero-actions">
           <a class="btn" href="#projects">View Projects</a>
-          <a class="btn btn-outline" href="resume/resume.pdf" download>Download Resume</a>
+          <button type="button" class="btn btn-outline resume-trigger">Download Resume</button>
           <a class="btn btn-outline" href="#contact">Contact</a>
         </div>
       </div>
@@ -424,13 +424,13 @@
         <h3>Full Résumé</h3>
         <p class="note">PDF, updated regularly.</p>
       </div>
-      <a class="btn" href="resume/resume.pdf" download>Download PDF</a>
+      <button type="button" class="btn resume-trigger">Download PDF</button>
     </div>
 
     <div class="contact-block" id="contact">
       <p class="location">Based in Boulder, CO. Open to relocation.</p>
       <div class="contact-list">
-        <a href="mailto:zhirm08@outlook.com">Email</a>
+        <a href="#" class="obfuscated-email" data-user="zhirm08" data-domain="outlook.com">Email</a>
         <a href="https://www.linkedin.com/in/zander-hirman-918364390/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/ZanderHirman08" target="_blank" rel="noopener">GitHub</a>
       </div>
@@ -443,6 +443,21 @@
     &copy; 2026 Zander Hirman
   </div>
 </footer>
+
+<div class="resume-gate" id="resumeGate" hidden>
+  <div class="resume-gate-box" role="dialog" aria-modal="true" aria-labelledby="resumeGateQ">
+    <button type="button" class="resume-gate-close" id="resumeGateClose" aria-label="Close">&times;</button>
+    <p class="resume-gate-label">Human Verification &mdash; Geography Question</p>
+    <p class="resume-gate-q" id="resumeGateQ">What's the capital of New Jersey?</p>
+    <div class="resume-gate-options">
+      <button type="button" class="resume-gate-option" data-answer="correct">Trenton</button>
+      <button type="button" class="resume-gate-option" data-answer="wrong" data-msg="The Sopranos.">Newark</button>
+      <button type="button" class="resume-gate-option" data-answer="wrong" data-msg="I can see it.">Jersey City</button>
+      <button type="button" class="resume-gate-option" data-answer="wrong" data-msg="*raises eyebrow*">Denver</button>
+    </div>
+    <p class="resume-gate-msg" id="resumeGateMsg"></p>
+  </div>
+</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="js/maps.js"></script>

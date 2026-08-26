@@ -1,6 +1,56 @@
 const navToggle = document.getElementById('navToggle');
 const siteNav = document.getElementById('siteNav');
 
+// Assemble the email link at runtime so a plain mailto: string is never
+// sitting in the page's HTML for scrapers to regex out.
+document.querySelectorAll('.obfuscated-email').forEach((link) => {
+  const user = link.dataset.user;
+  const domain = link.dataset.domain;
+  link.href = `mailto:${user}@${domain}`;
+});
+
+// Resume gate: the actual resume link never sits in the page's HTML,
+// only assembled here and opened after a correct answer.
+const RESUME_URL = 'https://drive.google.com/file/d/1jjr7TrBBrtlqQA_r4s2I8NMW0HpKP8O0/view?usp=sharing';
+const resumeGate = document.getElementById('resumeGate');
+const resumeGateMsg = document.getElementById('resumeGateMsg');
+const resumeGateClose = document.getElementById('resumeGateClose');
+
+function openResumeGate() {
+  resumeGateMsg.textContent = '';
+  resumeGate.hidden = false;
+}
+function closeResumeGate() {
+  resumeGate.hidden = true;
+}
+
+document.querySelectorAll('.resume-trigger').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    if (localStorage.getItem('resumeVerified') === 'true') {
+      window.open(RESUME_URL, '_blank', 'noopener');
+    } else {
+      openResumeGate();
+    }
+  });
+});
+
+resumeGateClose.addEventListener('click', closeResumeGate);
+resumeGate.addEventListener('click', (e) => {
+  if (e.target === resumeGate) closeResumeGate();
+});
+
+document.querySelectorAll('.resume-gate-option').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    if (btn.dataset.answer === 'correct') {
+      localStorage.setItem('resumeVerified', 'true');
+      closeResumeGate();
+      window.open(RESUME_URL, '_blank', 'noopener');
+    } else {
+      resumeGateMsg.textContent = btn.dataset.msg || 'Not quite — try again.';
+    }
+  });
+});
+
 navToggle.addEventListener('click', () => {
   const isOpen = siteNav.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', isOpen);
