@@ -1,0 +1,6 @@
+# Raw photo originals — the site only uses the resized copies in gallery/web/
+assets/images/gallery/*/
+!assets/images/gallery/web/
+
+# Leftover from a local git repair, not part of the site
+.git.broken-backup/
