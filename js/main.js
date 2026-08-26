@@ -24,10 +24,17 @@ function closeResumeGate() {
   resumeGate.hidden = true;
 }
 
+function trackResumeDownload() {
+  if (window.trackSiteEvent) {
+    window.trackSiteEvent('download', { href: RESUME_URL, text: 'Resume', external: true });
+  }
+}
+
 document.querySelectorAll('.resume-trigger').forEach((btn) => {
   btn.addEventListener('click', () => {
     if (localStorage.getItem('resumeVerified') === 'true') {
       window.open(RESUME_URL, '_blank', 'noopener');
+      trackResumeDownload();
     } else {
       openResumeGate();
     }
@@ -45,6 +52,7 @@ document.querySelectorAll('.resume-gate-option').forEach((btn) => {
       localStorage.setItem('resumeVerified', 'true');
       closeResumeGate();
       window.open(RESUME_URL, '_blank', 'noopener');
+      trackResumeDownload();
     } else {
       resumeGateMsg.textContent = btn.dataset.msg || 'Not quite — try again.';
     }
