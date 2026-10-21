@@ -1,12 +1,12 @@
-const voyagerTiles = () => L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
-  maxZoom: 18
+const basemapTiles = () => L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom: 19
 });
 
 const heroMapEl = document.getElementById('hero-map');
 if (heroMapEl) {
   const heroMap = L.map(heroMapEl, { scrollWheelZoom: false, worldCopyJump: true }).setView([25, -40], 2);
-  voyagerTiles().addTo(heroMap);
+  basemapTiles().addTo(heroMap);
 
   const locations = [
     { name: 'Chipanga, Tanzania', desc: 'Water & Garden Project', lat: -9.33, lng: 34.77, href: 'https://zanderhirman08.github.io/Chipanga-Water-Charlie-PC/' },
